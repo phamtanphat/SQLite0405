@@ -1,5 +1,6 @@
 package com.ptp.phamtanphat.sqlite0405;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +34,9 @@ public class ThemmonanActivity extends AppCompatActivity {
 
                 if (!ten.isEmpty() && !gia.isEmpty() && !diachi.isEmpty()){
                     MainActivity.sqLite.QueryData("INSERT INTO Nhahang VALUES(null , '" + ten+ "' , "+ gia +" , '" + diachi +"')");
+                    Intent intent = new Intent(ThemmonanActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(ThemmonanActivity.this, "Thanh cong!!", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(ThemmonanActivity.this, "Hay du thong tin!!", Toast.LENGTH_SHORT).show();
                 }

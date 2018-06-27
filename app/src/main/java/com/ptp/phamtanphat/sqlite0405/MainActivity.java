@@ -1,9 +1,12 @@
 package com.ptp.phamtanphat.sqlite0405;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +34,23 @@ public class MainActivity extends AppCompatActivity {
             Log.d("BBB","Id : " + id + "\n" + "Ten mon an : " + tenmonan);
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_chuyen_man_hinh,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.itemChuyenmanhinh :
+                Intent intent = new Intent(this,ThemmonanActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+}
 }
 
 
