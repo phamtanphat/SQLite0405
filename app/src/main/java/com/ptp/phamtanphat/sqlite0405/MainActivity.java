@@ -7,7 +7,7 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
-    SQLite sqLite;
+   static SQLite sqLite;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
