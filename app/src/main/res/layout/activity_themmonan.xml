@@ -1,10 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f20"
     tools:context=".ThemmonanActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textColor="#f20"
+        android:textSize="40sp"
+        android:text="Them mon an moi"
+        android:id="@+id/textviewtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:maxLines="1"
+        android:textSize="25sp"
+        android:hint="Nhap ten mon an"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/textviewtitle"
+        android:id="@+id/edittextTenmonan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:maxLines="1"
+        android:textSize="25sp"
+        android:hint="Nhap gia mon an"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/edittextTenmonan"
+        android:id="@+id/edittextGiamonan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:maxLines="1"
+        android:textSize="25sp"
+        android:hint="Nhap dia chi"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/edittextGiamonan"
+        android:id="@+id/edittextDiachi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonHuy"
+        android:text="Huy"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/edittextDiachi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonXacnhan"
+        android:text="Xac nhan"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/edittextDiachi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
