@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="30sp"
+        android:text="Ten mon an"
+        android:textColor="#f20"
+        android:id="@+id/textviewTenmonan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/textviewTenmonan"
+        android:textSize="30sp"
+        android:text="Gia mon an"
+        android:textColor="#265296"
+        android:id="@+id/textviewGiamonan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/textviewGiamonan"
+        android:textSize="30sp"
+        android:text="Dia chi"
+        android:textColor="#464b53"
+        android:id="@+id/textviewDiachi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
