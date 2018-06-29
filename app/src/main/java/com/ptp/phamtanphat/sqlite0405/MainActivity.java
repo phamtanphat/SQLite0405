@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -46,6 +48,23 @@ public class MainActivity extends AppCompatActivity {
         }
         monanAdapter = new MonanAdapter(MainActivity.this,android.R.layout.simple_list_item_1,mangmonan);
         lvMonan.setAdapter(monanAdapter);
+        lvMonan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this,UpdateActivity.class);
+                intent.putExtra("monan",mangmonan.get(position));
+                startActivity(intent);
+            }
+        });
+        lvMonan.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                MainActivity.sqLite.QueryData("DELETE FROM Nhahang WHERE Id = '" + mangmonan.get(position).getId() + "'");
+                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent);
+                return false;
+            }
+        });
     }
 
     @Override
